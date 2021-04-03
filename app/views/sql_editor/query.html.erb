@@ -1,0 +1,23 @@
+<div class="sql-editor_root">
+    <div>db 정보
+        <div>
+            db명: <%= @databaseName %>
+        </div>
+        
+    </div> 
+    <div>테이블명
+        <% @tables.each do |table| %>
+            <div><%= table %></div>
+        <% end %>
+    </div> 
+    <%= form_with url: "/sql_editor", method: :post do |form| %>
+        <div class="form-group">
+
+            <%= form.text_area :message, size: "150x5" %>
+            <%= form.submit "전송" %>
+
+        </div>
+        
+    <% end %>
+
+</div>
