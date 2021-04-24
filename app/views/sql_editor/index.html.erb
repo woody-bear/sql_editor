@@ -1,21 +1,19 @@
 <div class="index_root">
-    
+  <%= @result %>
     <table class="table table-bordered">
         <thead>
             <tr>
-                <% @result.columns.each do |column| %>
-                    <th><%= column %></th>
-                <% end  %>
+
             </tr>
         </thead>
         <tbody>
-            <% @result.each do |row| %>
-                <tr>
-                <% @result.columns.each do |column| %>
-                    <td><%= row[column] %></td>
-                <% end  %>
-                </tr>
-            <% end %>
+            <%# @result.each do |row| %>
+<!--                <tr>-->
+                <%# @result.columns.each do |column| %>
+<!--                    <td><%#= row[column] %></td>-->
+                <%# end  %>
+<!--                </tr>-->
+            <%# end %>
         </tbody>
     </table>
 </div>

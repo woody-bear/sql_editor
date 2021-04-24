@@ -55,12 +55,12 @@
             <p>
                 <%= q.query %>
             </p>
-<!--            <p>-->
-<!--              작성일 :  <%#= q.created_at.strftime("%Y-%m-%d") %>-->
-<!--            </p>-->
+            <p>
+              작성일 :  <%= q.created_at.strftime("%Y-%m-%d") %>
+            </p>
         <% end %>
-    </div> 
-    
+    </div>
+
     <%= form_with url: "/sql_editor", method: :post, html: {target: 'result_frame'} do |form| %>
         <div class="form-group">
             <%= form.text_area :message, size: "150x5" %>
